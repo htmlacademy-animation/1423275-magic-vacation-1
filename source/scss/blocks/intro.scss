@@ -93,20 +93,9 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
-  animation-name: fade-in-transform-y;
+  animation-name: fadeIn, moveUp;
   animation-timing-function: ease-in;
   animation-duration: 0.4s;
-
-  @keyframes fade-in-transform-y {
-    0% {
-      opacity: 0;
-      transform: translateY(1.5rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
   @media (min-width: $stop-scaling) {
     width: 509px;
