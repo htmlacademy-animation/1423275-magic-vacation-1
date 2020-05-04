@@ -10118,8 +10118,8 @@ module.exports = code;
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   window.onload = () => {
-    document.body.classList.add('loaded')
-  }
+    document.body.classList.add(`loaded`);
+  };
 });
 
 
