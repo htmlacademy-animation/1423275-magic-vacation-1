@@ -8,9 +8,10 @@
     width: 100%;
     background-color: $c-dark;
     transition: all 0.4s ease-out;
+    z-index: 1;
   }
 
-  &__filled::after {
+  &--filled::after {
     height: 100%;
   }
 }

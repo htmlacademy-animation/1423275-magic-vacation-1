@@ -12,9 +12,9 @@ export default () => {
     ];
 
     if (screensToFill.includes(screenName)) {
-      page.classList.add(`page-content__filled`);
+      page.classList.add(`page-content--filled`);
     } else {
-      page.classList.remove(`page-content__filled`);
+      page.classList.remove(`page-content--filled`);
     }
   });
 };
