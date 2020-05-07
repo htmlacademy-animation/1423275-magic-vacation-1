@@ -35,16 +35,6 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
-  opacity: 0;
-  transform: translateX(-1.5rem);
-  transition:
-    opacity 0.4s $ease-out-circ 0.1s,
-    transform 0.4s $ease-out-circ 0.1s;
-
-  .loaded & {
-    opacity: 1;
-    transform: translateX(0);
-  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -140,12 +130,6 @@
 .page-header__nav {
   display: flex;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s $ease-out-circ 0.2s;
-
-  body.loaded & {
-    opacity: 1;
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -257,7 +241,6 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color 0.4s ease;
 
     &::after {
       content: "";
@@ -266,16 +249,8 @@
       width: 100%;
       height: 2px;
       background-color: $c-light;
+      display: none;
       left: 0;
-      display: block;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.4s $ease-out-circ 0.2s;
-
-      @media (min-width: $stop-scaling) {
-        left: -5px;
-        right: -5px;
-      }
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -290,10 +265,9 @@
       }
     }
 
-    body.loaded &.active {
+    &.active {
       &::after {
-        transform: scaleX(1);
-        transform-origin: left;
+        display: block;
       }
     }
 
@@ -305,8 +279,6 @@
       &::after {
         opacity: 1;
         background-color: $c-purple;
-        transform: scaleX(1);
-        transform-origin: left;
       }
     }
   }
