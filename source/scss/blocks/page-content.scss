@@ -1,0 +1,17 @@
+.page-content {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: $c-dark;
+    transition: all 0.4s ease-out;
+    z-index: 1;
+  }
+
+  &--filled::after {
+    height: 100%;
+  }
+}
