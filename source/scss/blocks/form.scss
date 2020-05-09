@@ -49,15 +49,6 @@
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
 
-  @keyframes grow {
-    from {
-      max-width: 0;
-    }
-    to {
-      max-width: 100%;
-    }
-  }
-
   &:focus {
     border: 1px solid $c-purple;
   }
