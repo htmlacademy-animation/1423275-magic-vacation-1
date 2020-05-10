@@ -17,6 +17,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: all 0.4s ease;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -93,7 +94,7 @@
   }
 
   &:active,
-  &:active:focus {
+  .social-block--active &:focus {
     color: $c-light;
 
     &::before {
