@@ -149,6 +149,11 @@
   justify-content: space-between;
   width: 17rem;
   z-index: 1;
+  animation-name: fadeIn;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
 
   @media (min-width: $stop-scaling) {
     bottom: 28px;
@@ -234,6 +239,37 @@
     opacity: 0.5;
     pointer-events: none;
   }
+
+  &--prev,
+  &--next {
+    animation-name: rollRight;
+    animation-timing-function: $ease-out-back;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
+  }
+
+  &--next {
+    animation-name: rollLeft;
+  }
+
+  @keyframes rollRight {
+    from {
+      transform: translateX(-6rem) rotate(-90deg);
+    }
+    to {
+      transform: translateX(0) rotate(0);
+    }
+  }
+
+  @keyframes rollLeft {
+    from {
+      transform: translateX(6rem) rotate(90deg);
+    }
+    to {
+      transform: translateX(0) rotate(0);
+    }
+  }
 }
 
 .slider__pagination.swiper-pagination {
@@ -248,6 +284,11 @@
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 4rem;
+  animation-name: fadeIn;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
 
   @media (min-width: $stop-scaling) {
     bottom: 28px;
