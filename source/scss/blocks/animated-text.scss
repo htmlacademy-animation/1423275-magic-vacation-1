@@ -1,0 +1,23 @@
+.animated-text__letter {
+  display: inline-block;
+  animation-name: growText;
+  animation-duration: 0.8s;
+  animation-timing-function: $ease-out-expo;
+  animation-fill-mode: both;
+}
+
+@keyframes growText {
+  from {
+    transform: translate3d(0, calc(100% + 2rem), 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated-text__word {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 2rem;
+}
