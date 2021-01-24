@@ -127,7 +127,7 @@
     attributeType="CSS"
     attributeName="opacity"
     begin="mountainsMorph.begin"
-    dur="1s"
+    dur="0.5s"
     from="1"
     to="0"
     fill="freeze"/>
