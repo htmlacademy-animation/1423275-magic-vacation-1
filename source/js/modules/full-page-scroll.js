@@ -45,6 +45,14 @@ export default class FullPageScroll {
       screen.classList.remove(`active`);
     });
     this.screenElements[this.activeScreen].classList.add(`active`);
+    this.screenElements[this.activeScreen]
+    .querySelectorAll(`.smil`)
+    .forEach((img) => {
+      if (img.dataset.played !== `true`) {
+        img.src = img.src + `?${Date.now()}`;
+        img.dataset.played = `true`;
+      }
+    });
 
     setTimeout(() => {
       this.screenElements.forEach((screen, idx) => {
